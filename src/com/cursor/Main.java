@@ -37,7 +37,7 @@ public class Main {
 
 
     public static boolean checkInputCorrect(String input) {
-        Pattern pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[_])(?=\\S+$).{1,20}$");
+        Pattern pattern = Pattern.compile ("[a-zA-Z0-9]{0,20}");
         Matcher matcher = pattern.matcher(input);
         return matcher.matches();
     }
