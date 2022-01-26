@@ -1,10 +1,8 @@
 package com.cursor;
 
-
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 
 public class Main {
 
@@ -23,7 +21,6 @@ public class Main {
         }
         while (!confirmPassword(initScanner("Please, confirm Password"))) {
             confirmPassword(initScanner("Please, confirm Password"));
-
         }
         passwordEquals(passwordResult, confirmPasswordResult);
     }
@@ -35,13 +32,11 @@ public class Main {
         return inputType;
     }
 
-
     public static boolean checkInputCorrect(String input) {
-        Pattern pattern = Pattern.compile ("[a-zA-Z0-9]{0,20}");
+        Pattern pattern = Pattern.compile("[a-zA-Z0-9]{0,20}");
         Matcher matcher = pattern.matcher(input);
         return matcher.matches();
     }
-
 
     public static boolean login(String login) {
         boolean flag = false;
